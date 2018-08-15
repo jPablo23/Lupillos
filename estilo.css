@@ -1,0 +1,36 @@
+﻿h1 {
+    color:#000000;
+    size:200px;
+    font-family: "Lucida Grande","Lucida Sans Unicode", helvetica, verdana, arial, sans-serif;
+}
+
+.menu {
+    font-family: "Lucida Grande","Lucida Sans Unicode", helvetica, verdana, arial, sans-serif;
+    font-size:12px;
+    color:#FFFFFF;
+}
+
+body {
+    font-family: "Lucida Grande","Lucida Sans Unicode", helvetica, verdana, arial, sans-serif;
+    font-size:76%;/*set regular font size*/
+    text-align: center;
+    background-color:#5a9fbf;
+    background-image:url(gifs/fondo2.gif);
+}
+
+a {
+    color:#FFFFFF;
+}
+
+.divcontenido {
+	width:800;
+    height:600;
+}
+
+.divmenu {
+    width:200;
+    height:600;
+    background-color:#4295bc;
+    background-image:url(img/fondo_menu.jpg);
+    border:thin solid;
+}

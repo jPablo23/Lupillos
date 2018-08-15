@@ -1,0 +1,162 @@
+﻿<html>
+    <head>
+        <title>Lupiyos</title>
+        <link type="text/css" rel="stylesheet" href="estilo.css"/>
+        <script type="text/javascript" src="menu.js"></script>
+						
+    </head>
+<body>
+<!-- inicio de head--> 
+<script>
+mesk=new
+Array();mesk[10]="A";mesk[11]="B";mesk[12]="C";mesk[13]="D";mesk[14]="E";mesk[15]="F";A=10;B=11;C=12;D=13;E=14;F=15;let="ABCDEF";function
+mes(num){if(let.indexOf(num) != -1){return eval(num)};else{if(num
+< 10){return eval(num)};else{return mesk[num]}}};
+
+function color(begin,einde,stappen,stap){
+hh1=(mes(begin.charAt(0))*16)+mes(begin.charAt(1));
+hh2=(mes(begin.charAt(2))*16)+mes(begin.charAt(3));
+hh3=(mes(begin.charAt(4))*16)+mes(begin.charAt(5));
+pp1=(mes(einde.charAt(0))*16)+mes(einde.charAt(1));
+pp2=(mes(einde.charAt(2))*16)+mes(einde.charAt(3));
+pp3=(mes(einde.charAt(4))*16)+mes(einde.charAt(5));
+
+if(hh1 < pp1){ff1=hh1+Math.floor((pp1-hh1)/stappen*stap);
+ff1=eval("\'"+mes(Math.floor(ff1/16))+"\'")+eval("\'"+mes(ff1-(Math.floor(ff1/16)*16))+"\'");}
+
+;else{ff1=hh1-Math.floor((hh1-pp1)/stappen*stap);
+ff1=eval("\'"+mes(Math.floor(ff1/16))+"\'")+eval("\'"+mes(ff1-(Math.floor(ff1/16)*16))+"\'");}
+
+if(hh2 < pp2){ff2=hh2+Math.floor((pp2-hh2)/stappen*stap);
+ff2=eval("\'"+mes(Math.floor(ff2/16))+"\'")+eval("\'"+mes(ff2-(Math.floor(ff2/16)*16))+"\'");}
+
+;else{ff2=hh2-Math.floor((hh2-pp2)/stappen*stap);
+ff2=eval("\'"+mes(Math.floor(ff2/16))+"\'")+eval("\'"+mes(ff2-(Math.floor(ff2/16)*16))+"\'");}
+
+if(hh3 < pp3){ff3=hh3+Math.floor((pp3-hh3)/stappen*stap);
+ff3=eval("\'"+mes(Math.floor(ff3/16))+"\'")+eval("\'"+mes(ff3-(Math.floor(ff3/16)*16))+"\'");}
+
+;else{ff3=hh3-Math.floor((hh3-pp3)/stappen*stap);
+ff3=eval("\'"+mes(Math.floor(ff3/16))+"\'")+eval("\'"+mes(ff3-(Math.floor(ff3/16)*16))+"\'");}
+
+;return ff1+ff2+ff3}
+bum=0;bum2=0;txt=new Array();txt[0]="";function lightf(){
+for(i=0;i !=
+Math.floor(message.length/2);i++){txt[i]=color(lightcolor1,lightcolor2,Math.floor(message.length/2),i)};
+
+for(i=Math.floor(message.length/2);i !=
+message.length;i++){txt[i]=color(lightcolor2,lightcolor1,Math.floor(message.length/2),(i-Math.floor(message.length/2)))};
+
+lightf1()}
+function
+lightf1(){txt[message.length+1]="";bum2=message.length-bum;for(i=0;i !=
+message.length;i++){if(i+bum
+< message.length){txt[message.length+1]=txt[message.length+1]+"<font color='#"+txt[(i+bum)]+"'>"+message.charAt(i)+"</font>"};else{txt[message.length+1]=txt[message.length+1]+"<font color='#"+txt[i-bum2]+"'>"+message.charAt(i)+"</font>"
+}};if(bum !=
+message.length){bum++;};else{bum=0};light.innerHTML=txt[message.length+1];setTimeout("lightf1()",50)}
+
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" background="globulos.jpg">
+<!--inicio del body --> 
+<center><h1><div id="light"></div></h1>
+<script>
+lightcolor1="000000" // color
+lightcolor2="FFFFFF" // color
+message="Abarrotera Amado Nervo" // introduce el texto
+lightf()
+</script>
+</center>
+<!--fin del body --> 
+
+
+
+
+<h1>Abarrotera Amado Nervo</h1>
+
+
+<table border="0" cellpadding="0" cellspacing="5" align="center">
+<tr>
+    <td>
+        <div class="divcontenido" >
+            <iframe height="100%" frameborder="0" id="contenido" width="100%" src="inicio.html"></iframe>
+        </div>
+    </td>
+    <td>
+        <div class="divmenu">
+        <dl class="menu">
+                <dt>&nbsp;&nbsp;<a href="#" onclick="abrirMenu('inicio.html');">Inicio</a></dt>
+                <dt>&nbsp;&nbsp;Nosotros</dt>
+                <dd><a href="#" onclick="abrirMenu('quienes_somos.html');">¿Quienes somos?</a></dd>
+                <dt>&nbsp;&nbsp;Negocio</dt>
+				<dd><a href="#" onclick="abrirMenu('Nego.html');">Abarrotera</a></dd>
+                <dt>&nbsp;&nbsp;Producto</dt>
+				<dd><a href="#" onclick="abrirMenu('Producto.html');">La Mejor Calidad</a></dd>
+                <dt>&nbsp;&nbsp;Fotos</dt>
+				<dd><a href="#" onclick="abrirMenu('Fotos.html');">Fotos</a></dd>
+				<dt>&nbsp;&nbsp;Recetas</dt>
+				<dd><a href="#" onclick="abrirMenu('Recetas.html');">Quesadillas con bistek</a></dd>
+				<dt>&nbsp;&nbsp;San Felipe</dt>
+				<dd><a href="#" onclick="abrirMenu('San_Felipe.html');">Bonita Ciudad</a></dd>
+				
+            </dl>
+        </div>
+    </td>
+</tr>
+</table>
+<SCRIPT>
+<!-- Mas trucos en www.creatupropiawebweb.com -->
+//change the title text below to your own
+    var titletext="Lupillo´s.com"
+    var thetext=""
+    var started=false
+    var step=0
+    var times=1
+
+    function welcometext()
+    {
+      times--
+      if (times==0)
+      {
+        if (started==false)
+        {
+          started = true;
+          document.title = titletext;
+          setTimeout("anim()",1);
+        }
+        thetext = titletext;
+      }
+    }
+
+    function showstatustext(txt)
+    {
+      thetext = txt;
+      setTimeout("welcometext()",4000)
+      times++
+    }
+
+    function anim()
+    {
+      step++
+      if (step==7) {step=1}
+      if (step==1) {document.title='>==='+thetext+'===<'}
+      if (step==2) {document.title='=>=='+thetext+'==<='}
+      if (step==3) {document.title='>=>='+thetext+'=<=<'}
+      if (step==4) {document.title='=>=>'+thetext+'<=<='}
+      if (step==5) {document.title='==>='+thetext+'=<=='}
+      if (step==6) {document.title='===>'+thetext+'<==='}
+      setTimeout("anim()",200);
+    }
+
+if (document.title)
+window.onload=onload=welcometext
+</SCRIPT>
+
+<img src="gifs/music029.gif">
+<br>
+<a href="http://sanfeliperadio.com/">La Ciudad</a>
+<h6>Pagina Creada por Juan Pablo Rodriguez Mendoza derechos reservados. 14/04/2009</h6> 
+
+</body> 
+</html>
